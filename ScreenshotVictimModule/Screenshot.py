@@ -1,22 +1,27 @@
 import pyautogui
+import os
 
 
 
 
 
 
-
-class hack:
+class RATtackScreenshot:
     def __init__(self,screenshotname):
         self.screenshotname = screenshotname
+        desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop\\')
+
+
 
         self.screenshotname = pyautogui.screenshot()
-        self.screenshotname.save(screenshotname)
+        self.screenshotname.save(desktop + str(screenshotname))
 
 
-    def func(self):
-        s = self.screenshotname
-        return s
 
-p1 = hack("John.jpg")#Call this from another module so the name will be varied.)
-p1.func()
+
+
+
+
+
+
+p1 = RATtackScreenshot("Markdd.jpg")
